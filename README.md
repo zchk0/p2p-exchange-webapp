@@ -5,4 +5,3 @@
 Linux (Ubuntu), NGINX, MySQL, PHP (фремворк - Laravel), jQuery (обработка форм) + guzzlehttp (запросы API c бирж)
 
 ![Logo](https://i.ibb.co/qmyN84L/photo-2023-05-24-21-17-08.jpg)
-https://i.ibb.co/qmyN84L/photo-2023-05-24-21-17-08.jpg
