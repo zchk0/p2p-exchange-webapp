@@ -79,30 +79,5 @@
 		<div style="font-style: italic; color: #c6c9c9; padding-top: 11px;">Александр Зайченко | Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</div>		
 	</div>
 
-
-<!-- <form class="col-3 offset-4 border rounded" method="POST" action="{{ route('user.login') }}">
-@csrf
-<div class="form-group">
-<label for="email" class="col-form-label-lg">Baw email</label>
-<input class="form-control" id="email" name="email" type="text" value="" placeholder="Email">
-@error('email')
-<div class="alert alert-danger">{{ $message }}</div>
-@enderror
-</div>
-<div class="form-group">
-<label for="password" class="col-form-label-lg">Пaponь</label>
-<input class="form-control" id="password" name="password" type="password" value="" placeholder="Пapon">
-@error('password')
-<div class="alert alert-danger">{{ $message }}</div>
-@enderror
-</div>
-
-<div class="form-group">
-<button class="btn btn-lg btn-primary" type="submit" name="sendMe" value="1">Войти</button>
-</div>
-</form> -->
-	
-	
-
 </body>
 </html>
