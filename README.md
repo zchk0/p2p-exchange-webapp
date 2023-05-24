@@ -1,5 +1,5 @@
 # p2p-exchange-webapp
-Веб-риложение ([p2p.zchk.ru](http://p2p.zchk.ru/)) по поиску выгодных P2P заявок между биржами.
+Веб-риложение ([p2p.zchk.ru](http://p2p.zchk.ru/)) на Larevel по поиску выгодных P2P заявок между биржами.
 
 ### Стэк
 - LEMP (Linux(Ubuntu) + NGINX + MySQL + PHP)
