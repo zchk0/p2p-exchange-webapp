@@ -4,4 +4,4 @@
 ## Стэк
 Linux (Ubuntu), NGINX, MySQL, PHP (фремворк - Laravel), jQuery (обработка форм) + guzzlehttp (запросы API c бирж)
 
-![Logo](https://i.ibb.co/TPv4GnD/photo-2023-05-24-21-17-08.jpg)
+![Logo](https://i.ibb.co/qmyN84L/photo-2023-05-24-21-17-08.jpg)
