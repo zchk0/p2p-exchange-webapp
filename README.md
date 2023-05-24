@@ -7,5 +7,4 @@
 - jQuery (обработка форм) 
 - Библиотека guzzlehttp (запросы API c бирж)
 
-[https://i.ibb.co/qmyN84L/photo-2023-05-24-21-17-08.jpg](http://d.zchk.ru/photo-2023-05-24-21-17-08.jpg)
-![Logo](https://i.ibb.co/qmyN84L/photo-2023-05-24-21-17-08.jpg)
+![Logo](https://github.com/zchk0/p2p-exchange-webapp/blob/main/logo-p2p.jpg?raw=true)
