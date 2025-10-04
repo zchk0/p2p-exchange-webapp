@@ -7,9 +7,6 @@
     <title>Загрузка файла</title>
     <script src="/jquery-3.6.4.min.js"></script>
     <script src="/jquery.form.min.js"></script>
-</head>
-
-<body>
     <style>
         .form-control {
             display: block;
@@ -71,6 +68,9 @@
             transition: width .6s ease;
         }
     </style>
+</head>
+
+<body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
