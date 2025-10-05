@@ -64,73 +64,9 @@
       top: 100% !important
     }
 
-    .top-line {
-      background: #fff;
-      border-bottom: 1px solid #ccc;
-      overflow: hidden
-    }
-
-    .top-line2 {
-      background: #fff;
-      border-bottom: 1px solid #ccc;
-      cursor: default;
-      opacity: .7;
-      overflow-x: scroll;
-      transition: all .2s
-    }
-
-    .top-line2 ._inner {
-      align-items: center;
-      display: flex;
-      padding: 15px 15px
-    }
-
-    .top-line2 ._inner>div {
-      align-items: center;
-      display: flex;
-      font-size: 13px;
-      margin-right: 30px;
-      white-space: nowrap
-    }
-
-    .top-line2 ._inner>div ._t {
-      color: #58667e;
-      font-weight: 600;
-      margin-right: 15px
-    }
-
-    .top-line2 ._inner>div ._v {
-      background: #f9f9f9;
-      color: #58667e;
-      margin: 0 15px 0 0;
-      padding: 0 11px
-    }
-
-    .top-line2 ._inner>div ._v i {
-      color: #384252;
-      font-size: 10px;
-      font-style: normal
-    }
-
-    .top-line2 ._inner>div:last-child {
-      margin-right: 0
-    }
-
-    .top-line2:hover {
-      opacity: 1
-    }
-
-    .top-line2:hover ._inner>div ._t {
-      color: #0a2882
-    }
-
     @media (max-width:768px) {
       nav .logo {
         font-size: 19px !important;
-      }
-
-      .table_sort_div {
-        padding: 16px 10px 20px !important;
       }
     }
 
@@ -203,7 +139,7 @@
 
 <body>
   <div style="min-height: calc(100vh - 180px);padding: 0 0 50px;">
-    @include('components.price-line')
+    <x-price-line />
 
     @include('layouts.nav')
 

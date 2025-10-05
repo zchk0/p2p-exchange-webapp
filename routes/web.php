@@ -11,3 +11,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// ГЛАВНАЯ СТРАНИЦА
+Route::get('/', function () {
+    return view('p2p-app.index');
+});
+
+// СТРАНИЦА FAQ
+Route::get('/faq', function () {
+    return view('p2p-app.faq');
+});

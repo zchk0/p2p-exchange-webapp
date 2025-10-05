@@ -1,62 +1,118 @@
-<?php
-    $mascurr = ["usd" => [], "eur" => [], "rub" => [], "kzt" => [], "try" => [], "uah" => []];
-    $mclist = [
-        "usd" => ["price", "cbprice"], 
-        "eur" => ["price", "cbprice"], 
-        "rub" => ["price", "cbprice"], 
-        "kzt" => ["price", "cbprice"], 
-        "try" => ["price", "cbprice"], 
-        "uah" => ["price", "cbprice"]
-    ];
+<div class="price-line">
+  <div class="price-line__inner">
+    <div class="price-line__group">
+      <div class="price-line__title">USDT:</div>
 
-    if (!empty($currlist)) {
-        for($i = 0; $i < count($currlist); $i++) {
-            $mascurr[$currlist[$i]->fiat][] = $currlist[$i]->price; 
-            $mclist[$currlist[$i]->fiat]['cbprice'] = $currlist[$i]->cbankprice;
-        }
-        foreach($mascurr as $title => $vv) {
-            $s = $i = 0;
-            foreach($vv as $v){$i++;$s += floatval($v);}
-            $mclist[$title]['price'] = empty($i) ? 0 : round($s / $i, 3);;
-        }
-    }
-    else {
-        for($i = 0; $i < count($currlistold); $i++) {
-            $mascurr[$currlistold[$i]->fiat][] = $currlistold[$i]->price; 
-            $mclist[$currlistold[$i]->fiat]['cbprice'] = $currlistold[$i]->cbankprice;
-        }
-        foreach($mascurr as $title => $vv) {
-            $s = $i = 0;
-            foreach($vv as $v){$i++;$s += floatval($v);}
-            $mclist[$title]['price'] = empty($i) ? 0 : round($s / $i, 3);
-        }
-    }	    
-?>
-<div class="top-line2" id="top-line2">
-  <div class="_inner">
-    <div>
-      <div class="_t">USDT:</div>
-      <div class="_v" title="Средняя цена за 1 USDT"><?php echo $mclist['usd']['price']; ?> <i>USD</i>
+      <div class="price-line__value" title="Средняя цена за 1 USDT">
+        <span class="price-line__number">{{ $mclist['usd']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">USD</span>
       </div>
-      <div class="_v" title="Средняя цена за 1 USDT"><?php echo $mclist['eur']['price']; ?> <i>EUR</i>
+      <div class="price-line__value" title="Средняя цена за 1 USDT">
+        <span class="price-line__number">{{ $mclist['eur']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">EUR</span>
       </div>
-      <div class="_v" title="Средняя цена метода TINKOFF за 1 USDT"><span
-          class="als-usd"><?php echo $mclist['rub']['price']; ?></span> <i>RUB</i></div>
-      <div class="_v" title="Средняя цена за 1 USDT"><?php echo $mclist['uah']['price']; ?> <i>UAH</i>
+      <div class="price-line__value" title="Средняя цена метода TINKOFF за 1 USDT">
+        <span class="price-line__number price-line__number--accent">{{ $mclist['rub']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">RUB</span>
       </div>
-      <div class="_v" title="Средняя цена метода Kaspi Bank за 1 USDT">
-        <?php echo $mclist['kzt']['price']; ?> <i>KZT</i></div>
-      <div class="_v" title="Средняя цена метода Ziraat за 1 USDT"><?php echo $mclist['try']['price']; ?>
-        <i>TRY</i>
+      <div class="price-line__value" title="Средняя цена за 1 USDT">
+        <span class="price-line__number">{{ $mclist['uah']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">UAH</span>
+      </div>
+      <div class="price-line__value" title="Средняя цена метода Kaspi Bank за 1 USDT">
+        <span class="price-line__number">{{ $mclist['kzt']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">KZT</span>
+      </div>
+      <div class="price-line__value" title="Средняя цена метода Ziraat за 1 USDT">
+        <span class="price-line__number">{{ $mclist['try']['price'] ?? 0 }}</span>
+        <span class="price-line__unit">TRY</span>
       </div>
     </div>
-    <div>
-      <div class="_t">USD (ЦБ <?php echo date("d.m.Y") ?>):</div>
-      <div class="_v" title="Курс ЦБ"><?php echo $mclist['eur']['cbprice'] ?? 0; ?> <i>EUR</i></div>
-      <div class="_v" title="Курс ЦБ РФ"><?php echo $mclist['rub']['cbprice'] ?? 0; ?> <i>RUB</i></div>
-      <div class="_v" title="Курс ЦБ"><?php echo $mclist['uah']['cbprice'] ?? 0; ?> <i>UAH</i></div>
-      <div class="_v" title="Курс ЦБ РК"><?php echo $mclist['kzt']['cbprice'] ?? 0; ?> <i>KZT</i></div>
-      <div class="_v" title="Курс ЦБ"><?php echo $mclist['try']['cbprice'] ?? 0; ?> <i>TRY</i></div>
+
+    <div class="price-line__group">
+      <div class="price-line__title">USD (ЦБ {{ $date }}):</div>
+
+      <div class="price-line__value" title="Курс ЦБ">
+        <span class="price-line__number">{{ $mclist['eur']['cbprice'] ?? 0 }}</span>
+        <span class="price-line__unit">EUR</span>
+      </div>
+      <div class="price-line__value" title="Курс ЦБ РФ">
+        <span class="price-line__number">{{ $mclist['rub']['cbprice'] ?? 0 }}</span>
+        <span class="price-line__unit">RUB</span>
+      </div>
+      <div class="price-line__value" title="Курс ЦБ">
+        <span class="price-line__number">{{ $mclist['uah']['cbprice'] ?? 0 }}</span>
+        <span class="price-line__unit">UAH</span>
+      </div>
+      <div class="price-line__value" title="Курс ЦБ РК">
+        <span class="price-line__number">{{ $mclist['kzt']['cbprice'] ?? 0 }}</span>
+        <span class="price-line__unit">KZT</span>
+      </div>
+      <div class="price-line__value" title="Курс ЦБ">
+        <span class="price-line__number">{{ $mclist['try']['cbprice'] ?? 0 }}</span>
+        <span class="price-line__unit">TRY</span>
+      </div>
     </div>
   </div>
 </div>
+
+<style>
+  .price-line {
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    cursor: default;
+    opacity: .7;
+    overflow-x: auto;
+    transition: all .2s;
+  }
+
+  .price-line__inner {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+  }
+
+  .price-line__group {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    white-space: nowrap;
+    margin-right: 30px;
+  }
+
+  .price-line__group:last-child {
+    margin-right: 0;
+  }
+
+  .price-line__title {
+    color: #58667e;
+    font-weight: 600;
+    margin-right: 15px;
+  }
+
+  .price-line__value {
+    background: #f9f9f9;
+    color: #58667e;
+    margin: 0 15px 0 0;
+    padding: 0 11px;
+  }
+
+  .price-line__unit {
+    color: #384252;
+    font-size: 10px;
+    font-style: normal;
+  }
+
+  .price-line:hover {
+    opacity: 1;
+  }
+
+  .price-line:hover .price-line__title {
+    color: #0a2882;
+  }
+
+  /* Модификатор для акцентного числа (бывший .als-usd) */
+  .price-line__number--accent {
+    font-weight: 600;
+  }
+</style>
