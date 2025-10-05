@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::get('/', function () {
 Route::get('/faq', function () {
     return view('p2p-app.faq');
 });
+
+// СТРАНИЦА СТАТИСТИКИ
+Route::get('/stat', [StatController::class, 'index'])->name('stat.index');

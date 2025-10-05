@@ -39,6 +39,52 @@
             margin-right: 5px;
             border-radius: 8px;
         }
+
+        hr {
+            border-top: 1px solid #9b9898;
+            margin: 5px 0;
+        }
+
+        .table_sort table {
+            border-collapse: collapse;
+        }
+
+        .table_sort th {
+            color: #000000;
+            background: #ffffffad;
+            cursor: pointer;
+        }
+
+        .table_sort td,
+        .table_sort th {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            border: 2px solid #846868;
+        }
+
+        .table_sort tbody tr:nth-child(even) {
+            background: #e3e3e3;
+        }
+
+        th.sorted[data-order="1"],
+        th.sorted[data-order="-1"] {
+            position: relative;
+        }
+
+        th.sorted[data-order="1"]::after,
+        th.sorted[data-order="-1"]::after {
+            right: 8px;
+            position: absolute;
+        }
+
+        th.sorted[data-order="-1"]::after {
+            content: "▼"
+        }
+
+        th.sorted[data-order="1"]::after {
+            content: "▲"
+        }
     </style>
 </head>
 
@@ -217,7 +263,6 @@
                 });
             });
         </script>
-
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', () => {
                 const getSort = ({
@@ -241,54 +286,6 @@
                     'click', () => getSort(event)));
             });
         </script>
-
-        <style>
-            hr {
-                border-top: 1px solid #9b9898;
-                margin: 5px 0;
-            }
-
-            .table_sort table {
-                border-collapse: collapse;
-            }
-
-            .table_sort th {
-                color: #000000;
-                background: #ffffffad;
-                cursor: pointer;
-            }
-
-            .table_sort td,
-            .table_sort th {
-                width: 150px;
-                height: 40px;
-                text-align: center;
-                border: 2px solid #846868;
-            }
-
-            .table_sort tbody tr:nth-child(even) {
-                background: #e3e3e3;
-            }
-
-            th.sorted[data-order="1"],
-            th.sorted[data-order="-1"] {
-                position: relative;
-            }
-
-            th.sorted[data-order="1"]::after,
-            th.sorted[data-order="-1"]::after {
-                right: 8px;
-                position: absolute;
-            }
-
-            th.sorted[data-order="-1"]::after {
-                content: "▼"
-            }
-
-            th.sorted[data-order="1"]::after {
-                content: "▲"
-            }
-        </style>
     </div>
 
     @include('layouts.footer')

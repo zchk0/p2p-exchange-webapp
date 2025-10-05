@@ -1,7 +1,7 @@
 <nav class="header-nav" aria-label="Главная навигация">
   <div class="header-nav__container">
     <div class="header-nav__brand">
-      <a href="/" class="header-nav__logo" title="p2p">p2p.zchk.ru</a>
+      <a href="/" class="header-nav__logo" title="p2p">zchkP2P</a>
     </div>
     <div class="header-nav__actions">
       @if (Auth::check())
