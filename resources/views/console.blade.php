@@ -11,6 +11,11 @@
     <title>Агрегатор наилучших курсов P2P | p2p.zchk.ru</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
+        body {
+            background-attachment: fixed!important;
+            background: linear-gradient(0deg, rgb(27 56 44 / 13%), rgb(242 242 255));
+        }
+
         .top-0 {
             top: 0 !important
         }
@@ -156,21 +161,11 @@
     </style>
 </head>
 
-<body style="background-attachment: fixed!important;background: linear-gradient(0deg,rgb(27 56 44 / 13%),rgb(242 242 255));">
+<body>
     <div style="min-height: calc(100vh - 180px);padding: 0 0 50px;">
         @include('components.price-line')
 
-        <nav>
-            <div class="container0">
-                <div><a href="/" class="logo" title="p2p">p2p.zchk.ru</a></div>
-                <div>
-                    <div class="top-buttons">
-                        <a class="login-req-btn" href="/">На главную</a>
-                        <a class="login-req-btn" href="/logout">Выйти</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        @include('layouts.nav')
 
         <div class="container" style="padding-top: 55px;">
             <div class="panel panel-primary" style="border-color: #b9b9b9;">

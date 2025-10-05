@@ -47,9 +47,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    .container {
-      padding-right: 6px;
-      padding-left: 6px;
+    body {
+      background-attachment: fixed !important;
+      background: linear-gradient(0deg, rgb(27 56 44 / 13%), rgb(242 242 255));
     }
 
     .top-0 {
@@ -201,26 +201,11 @@
   </style>
 </head>
 
-<body style="background-attachment: fixed!important;background: linear-gradient(0deg,rgb(27 56 44 / 13%),rgb(242 242 255));">
+<body>
   <div style="min-height: calc(100vh - 180px);padding: 0 0 50px;">
     @include('components.price-line')
 
-    <nav>
-      <div class="container0">
-        <div><a href="/" class="logo" title="p2p">p2p.zchk.ru</a></div>
-        <div>
-          <div class="top-buttons">
-            @if (Auth::check())
-            <a class="login-req-btn" href="/console">Консоль</a>
-            <a class="login-req-btn" href="/logout">Выйти</a>
-            @else
-            <a class="login-req-btn" href="/login">Войти</a>
-            <a class="login-req-btn" href="/register">Регистрация</a>
-            @endif
-          </div>
-        </div>
-      </div>
-    </nav>
+    @include('layouts.nav')
 
     <div class="container" style="padding-top: 55px;">
       <div class="panel panel-primary" style="border-color: #b9b9b9;">

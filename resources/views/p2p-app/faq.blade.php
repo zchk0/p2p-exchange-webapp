@@ -36,9 +36,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.2.1/dist/chartjs-plugin-annotation.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
     <style>
-        .container {
-            padding-right: 8px;
-            padding-left: 8px;
+        body {
+            background-attachment: fixed!important;
+            background: linear-gradient(0deg, rgb(27 56 44 / 13%), rgb(242 242 255));
         }
 
         .top-0 {
@@ -201,26 +201,11 @@
     </style>
 </head>
 
-<body style="background-attachment: fixed!important;background: linear-gradient(0deg,rgb(27 56 44 / 13%),rgb(242 242 255));">
+<body>
     <div style="min-height: calc(100vh - 180px);padding: 0 0 50px;">
         @include('components.price-line')
 
-        <nav>
-            <div class="container0">
-                <div><a href="/" class="logo" title="p2p">p2p.zchk.ru</a></div>
-                <div>
-                    <div class="top-buttons">
-                        @if (Auth::check())
-                        <a class="login-req-btn" href="/console">Консоль</a>
-                        <a class="login-req-btn" href="/logout">Выйти</a>
-                        @else
-                        <a class="login-req-btn" href="/login">Войти</a>
-                        <a class="login-req-btn" href="/register">Регистрация</a>
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </nav>
+        @include('layouts.nav')
 
         <div class="faq_area section_padding_130" id="faq">
             <div class="container">
