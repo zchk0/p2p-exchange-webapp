@@ -91,7 +91,7 @@
   }
 
   .price-line__value {
-    background: #f9f9f9;
+    background: #efefef;
     color: #58667e;
     margin: 0 15px 0 0;
     padding: 0 11px;
@@ -108,7 +108,7 @@
   }
 
   .price-line:hover .price-line__title {
-    color: #0a2882;
+    color: #0c1b48ff;
   }
 
   /* Модификатор для акцентного числа (бывший .als-usd) */

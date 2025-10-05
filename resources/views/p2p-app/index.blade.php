@@ -28,66 +28,6 @@
             top: 100% !important
         }
 
-        @media (max-width:768px) {
-            nav .logo {
-                font-size: 19px !important;
-            }
-        }
-
-        .container0 {
-            max-width: 1150px;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 15px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: var(--bs-gutter-x, .75rem);
-            padding-right: var(--bs-gutter-x, .8rem);
-            width: 100%;
-        }
-
-        .nav {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            margin-bottom: 0;
-            padding-left: 0
-        }
-
-        nav {
-            background: #fff;
-            border-bottom: 1px solid #ccc
-        }
-
-        .container0>div {
-            font-size: 14px
-        }
-
-        nav .logo {
-            color: #000;
-            display: inline-block;
-            font-size: 25px;
-            font-weight: 700;
-            line-height: 30px;
-            padding: 10px 5px;
-            text-decoration: none
-        }
-
-        .top-buttons {
-            display: flex
-        }
-
-        .top-buttons>a {
-            background: #536aad;
-            border-radius: 10px;
-            color: #fff;
-            margin-left: 10px;
-            padding: 5px 20px;
-            text-decoration: none
-        }
-
-        .login-req-btn:hover,
         .btn-primary:hover {
             color: #fff;
             background-color: #286090 !important;
@@ -97,6 +37,7 @@
         .btn-primary {
             background-color: #536aad;
             margin-right: 5px;
+            border-radius: 8px;
         }
     </style>
 </head>
